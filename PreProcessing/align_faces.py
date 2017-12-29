@@ -52,8 +52,9 @@ for input_file in input_files:
                                 
                                 # display the output images
                                 if os.path.isfile(out_file):
+                                        file_name = out_file.split("\\")[-1]
                                         print(file_name.split(".")[0]+"0"+file_name.split(".")[1])
-                                        out_file = os.path.join(des_path, file_name.split(".")[0]+"(0)."+file_name.split(".")[1])
+                                        out_file = os.path.join(des_path, file_name.split(".")[0]+"(0)."+file_name.split(".")[-1])
                                 cv2.imwrite(out_file,faceAligned)
                                 cv2.waitKey(0)
                                 print(out_file)
