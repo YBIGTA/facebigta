@@ -8,6 +8,16 @@
 
 마지막 Fully-Connected layer부분도 원래 VGG에 비해 간단하게 구성하였습니다.
 
+# Dependency
+
+pytorch를 깔아주세요
+
+# Dataset
+
+데이터셋은 슬랙에 올려뒀습니다. 깃헙에 푸시할지말지는 미정입니다.
+
+# Usage
+
 사용법은
 
 ```
@@ -15,3 +25,5 @@ python vgg.py
 ```
 
 로 그냥 사용하시면 됩니다
+
+데이터 폴더는 vgg.py와 같은 폴더에 preprocessed라는 폴더가 있다고 가정합니다.

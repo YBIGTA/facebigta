@@ -86,7 +86,7 @@ model = VGG()
 model.apply(weights_init)
 model.cuda()
 criterion = nn.CrossEntropyLoss().cuda()
-optimizer = optim.Adam(model.parameters(), lr=0.0002)
+optimizer = optim.Adam(model.parameters(), lr=0.00002)
 
 for epoch in range(200):
     for i, (images, labels) in enumerate(loader):
@@ -116,5 +116,5 @@ for images, labels in loader:
     total += labels.cpu().size(0)
     correct += (predicted == labels).sum()
 
-print('Test Accuracy of the model on the 10000 test images: %d %%' % (100 * correct / total))
+print('Test Accuracy of the model on the train images: %d %%' % (100 * correct / total))
 print("Correct: ", correct)
